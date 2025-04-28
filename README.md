@@ -1,0 +1,1 @@
+This is a simple and responsive calculator web application built using HTML, CSS, and JavaScript. The calculator allows users to perform basic arithmetic operations, including addition, subtraction, multiplication, division, and percentage calculation. It also supports functionality like clearing inputs and deleting the last character.

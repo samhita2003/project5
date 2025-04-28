@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="/dist/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <style>
+
+    body, html {
+      width: 100%;
+      height: 100% !important;
+    }
+
+    .callParent {
+      width: 100% !important;
+    }
+
+
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+      .callParent {
+       width: 90% !important;
+      }
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1440px) {
+      .callParent {
+       width: 100% !important;
+       height: 100% !important;
+      }
+      .grid-parent{
+        margin-top: 3% !important;
+      }
+      .input-parent{
+        margin-top: 5% !important;
+      }
+      .callParent>h2{
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300 m-0 p-0 overflow-x-hidden flex justify-center items-center">
+  <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 callParent">
+    <h2 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">
+      Calculator
+    </h2>
+    <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-md mb-4 input-parent">
+      <input
+        type="text"
+        class="w-full bg-transparent text-right text-2xl font-bold text-gray-800 dark:text-white callInput" value="0" readonly/>
+    </div>
+    <div class="grid grid-cols-4 gap-2 grid-parent">
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors clearInput"
+      >
+        CE
+      </button>
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors clearInput"
+      >
+        C
+      </button>
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors deleteInput">
+        <i class="fa-solid fa-delete-left"></i>
+      </button>
+      <button
+        class="p-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors inputOperator"
+      >
+        %
+      </button>
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors inputVal"
+      >
+        8
+      </button>
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors inputVal"
+      >
+        9
+      </button>
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors inputVal"
+      >
+        7
+      </button>
+      <button
+        class="p-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors inputOperator"
+      >
+        +
+      </button>
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors inputVal"
+      >
+        5
+      </button>
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors inputVal"
+      >
+        6
+      </button>
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors inputVal"
+      >
+        4
+      </button>
+      <button
+        class="p-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors inputOperator"
+      >
+        -
+      </button>
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors inputVal"
+      >
+        2
+      </button>
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors inputVal"
+      >
+        3
+      </button>
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors inputVal"
+      >
+        1
+      </button>
+      <button
+        class="p-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors inputOperator"
+      >
+        *
+      </button>
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors inputVal"
+      >
+        .
+      </button>
+      <button
+        class="p-4 bg-gray-200 dark:bg-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors inputVal"
+      >
+        0
+      </button>
+      <button
+        class="p-4 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors result">
+        =
+      </button>
+      <button
+        class="p-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors inputOperator"
+      >
+        /
+      </button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mathjs@9.4.4/lib/browser/math.js"></script>
+
+  <script src="/src/index.js" type="module"></script>
+</body>
+</html> 
